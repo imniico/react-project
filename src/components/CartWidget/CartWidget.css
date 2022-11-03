@@ -1,0 +1,19 @@
+.menu_navbar_img{
+    filter: invert(1);
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    transition: 0.5s all;
+    
+}
+
+.menu_navbar_logo{
+    transition: 0.5s all;
+    border-radius: 12%;
+}
+
+.menu_navbar_logo:hover{
+    scale: 1.1;
+    background-color: #445069;
+
+}

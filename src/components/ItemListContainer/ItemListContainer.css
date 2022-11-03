@@ -1,0 +1,11 @@
+.msg_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.msg{
+    color: white;
+    font-family: "Source Sans Pro";
+}
