@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     font-family: "Poppins";
     cursor: pointer;
     transition: 0.5s all;
+    
 }
 
 .menu_lista {
@@ -56,3 +58,24 @@ body {
 .menu_title:hover {
     filter: drop-shadow(0px 0px 8px black);
 }
+
+.submenu_lista{
+    display: none;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+}
+
+.submenu_lista .submenu_item{
+    width: 200px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: "Source Sans Pro";
+    background-color: #1d2026;
+}
+
+.menu_lista li:hover .submenu_lista{
+    display: block;
+}
+

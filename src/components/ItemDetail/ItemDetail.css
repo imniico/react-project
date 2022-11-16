@@ -1,0 +1,50 @@
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10vh 20vw;
+    padding: 10px 0;
+
+    height: 70vh;
+
+    background-color: rgb(56, 65, 83);
+    border-radius: 10px;
+}
+
+.detalle h1{
+    color: white;
+    font-family: "Poppins";
+    font-size: 24px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+}
+
+.detalle h2{
+    color: white;
+    font-family: "Poppins";
+    font-size: 24px;
+
+}
+
+.detalle .nombre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.detalle .imgdetail{
+    height: 400px;
+}
+
+.detalle img{
+    height: 400px;
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 5px black);
+}
