@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
 
-    margin: 10vh 20vw;
-    padding: 10px 0;
+    margin: 1vh 20vw;
+    padding: 20px 0;
 
-    height: 70vh;
+    height: 85vh;
 
     background-color: rgb(56, 65, 83);
     border-radius: 10px;
@@ -35,8 +35,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
     margin-bottom: 50px;
+    gap: 10px;
 }
 
 .detalle .imgdetail{
@@ -47,4 +47,27 @@
     height: 400px;
     object-fit: cover;
     filter: drop-shadow(5px 5px 5px black);
+}
+
+.detalle .add-cart{
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-family: "Poppins";
+    color: black;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.detalle .add-cart:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.detalle .add-cantidad{
+    display: flex;
+    gap: 20px;
+
 }

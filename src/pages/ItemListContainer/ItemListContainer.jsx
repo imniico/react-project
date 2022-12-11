@@ -1,36 +1,57 @@
 import React from 'react';
 import "./ItemListContainer.css";
-import { data } from "../../data/data";
+// import { data } from "../../data/data";
 import { useState, useEffect } from 'react';
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+
+import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
 
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
     const { category } = useParams();
-    console.log(category);
 
-    const getProducts = new Promise((res, rej) => {
-        setTimeout(() => {
+    const getProducts = () => {
+        const db = getFirestore();
+        const querySnapshot = collection(db, "products");
+        
+        
+        if (category) {
+           
+            const queryFilter = query(querySnapshot, where("categoryId", "==", category))
+            getDocs(queryFilter)
+                .then((response) => {
+                    const data = response.docs.map((prod) => {
+                        return { id: prod.id, ...prod.data() }
+                    })
+                    setItems(data);
+                })
+                .catch((error) => { console.log(error) })
 
-            if (category) {
-                const filteredData = data.filter((prod) => {
-                    return prod.category === category;
-                });
-                res(filteredData);
-            } else {
-                res(data);
-            }
+        } else {
+            
+            getDocs(querySnapshot)
+                .then((response) => {
+                    const data = response.docs.map((prod) => {
+                        return { id: prod.id, ...prod.data() }
+                    })
+                    setItems(data);
+                })
+                .catch((error) => { console.log(error) })
+        }
 
-        }, 500);
-    })
+    }
 
     useEffect(() => {
-        getProducts.then((res) => {
-            setItems(res);
-        })
+        getProducts();
     }, [category]);
+
+    // useEffect(() => {
+    //     getProducts.then((res) => {
+    //         setItems(res);
+    //     })
+    // }, [category]);
 
     return (
         <div>

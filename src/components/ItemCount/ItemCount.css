@@ -1,0 +1,41 @@
+
+.contador-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador-container .contador{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: black;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.2s all;
+
+}
+
+.contador-container .contador:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.contador-container h3{
+    color: white;
+    font-family: "Poppins";
+    font-size: 24px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.contador-container h2{
+    color:black;
+    font-weight: 500;
+}
+
+
