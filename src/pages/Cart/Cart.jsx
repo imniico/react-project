@@ -7,7 +7,7 @@ import moment from 'moment';
 
 const Cart = () => {
 
-    const { cart } = useContext(cartContext);
+    const { cart, removeItem } = useContext(cartContext);
     const [total, setTotal] = useState(0);
     const [formValues, setFormValues] = useState({ email: '', name: '', phone: '' });
 
@@ -65,6 +65,7 @@ const Cart = () => {
                 <h2>Nombre</h2>
                 <h2>Cantidad</h2>
                 <h2>Precio Unit</h2>
+                <h2>Eliminar</h2>
             </div>
 
             {cart.map((product) => (
@@ -73,6 +74,7 @@ const Cart = () => {
                     <h2>{product.title}</h2>
                     <h2>{product.quantity}</h2>
                     <h2>${product.price}</h2>
+                    <div className="eliminar"><button onClick={() => removeItem(product.id) }> X </button></div> 
                 </div>
             ))}
 

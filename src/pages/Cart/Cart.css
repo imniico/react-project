@@ -58,7 +58,7 @@
 
 .carrito .carrito-item {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 4px;
     grid-row-gap: 0px;
@@ -88,6 +88,23 @@
     font-family: "Poppins";
     font-size: 20px;
     filter: drop-shadow(5px 5px 10px black);
+}
+
+.carrito .carrito-item .eliminar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito .carrito-item .eliminar button{
+    margin: 0;
+}
+
+.carrito .carrito-item .eliminar button:hover{
+    background-color: rgb(169, 26, 26);
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(5px 5px 5px black);
+    scale: 1.05;
 }
 
 .carrito .datos{

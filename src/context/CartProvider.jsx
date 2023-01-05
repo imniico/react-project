@@ -28,6 +28,7 @@ const CartProvider = ({children}) => {
         setCart([]);
     }
 
+   
     return (
         <cartContext.Provider value={{ cart, addToCart, removeItem, clearCart }}>
             {children}

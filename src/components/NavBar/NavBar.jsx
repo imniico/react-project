@@ -3,7 +3,11 @@ import CartWidget from '../CartWidget/CartWidget';
 import "./NavBar.css";
 import { Link } from 'react-router-dom';
 
+
 const NavBar = () => {
+
+   
+
     return (
         <div className='menu_navbar_container'>
 
