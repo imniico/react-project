@@ -26,7 +26,7 @@ const ItemDetail = ({ product }) => {
 
             <div className='add-cantidad'>
                 <h2> {count} </h2>
-                <ItemCount setCount={setCount} />
+                <ItemCount setCount={setCount} stock={product.stock} />
             </div>
 
             <button className="add-cart" onClick={() => addToCart(product, count) }>

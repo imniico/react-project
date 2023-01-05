@@ -1,10 +1,13 @@
 import React from 'react';
 import './ItemCount.css'
 
-const ItemCount = ({setCount}) => {
+const ItemCount = ({setCount, stock}) => {
 
     const sumar = () => {
-        setCount((valorActual) => valorActual + 1);
+        setCount((valorActual) => {
+            if (valorActual < stock) { return valorActual + 1 }
+            else { return valorActual }
+        });
     }
 
     const restar = () => {
