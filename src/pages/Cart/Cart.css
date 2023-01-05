@@ -1,11 +1,119 @@
-.msg_container{
+.msg_container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 500px;
 }
 
-.msg{
+.msg {
     color: white;
     font-family: "Source Sans Pro";
+}
+
+.carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh 10vw;
+    padding: 0 40px;
+    background-color: rgb(56, 65, 83);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.carrito h1, .carrito h3 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 30px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(40, 44, 52);
+    border-radius: 10px;
+}
+
+.carrito button{
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    width: 20%;
+    height: 40px;
+    background-color: rgb(40, 44, 52);
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s all;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.carrito button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(40, 44, 52);
+    filter: drop-shadow(5px 5px 5px black);
+    scale: 1.05;
+}
+
+.carrito .carrito-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 4px;
+    grid-row-gap: 0px;
+    width: 100%;
+    background-color:rgba(40, 44, 52, 0.4);
+    border-radius: 10px;
+}
+
+.carrito .carrito-item .imgcart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito .carrito-item img {
+    height: 100px;
+    aspect-ratio: 4/4;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 1px black);
+}
+
+.carrito .carrito-item h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.carrito .datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 44, 52, 0.4);
+    border-radius: 5px;
+}
+
+.carrito .datos .cart-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.carrito .datos .cart-form input{
+    color: white;
+    font-family: "Poppins";
+    font-size: 16px;
+    width: 30%;
+    background-color: rgba(40, 44, 52, 0.4);
+    border-radius: 5px;
+    
 }

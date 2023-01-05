@@ -8,8 +8,8 @@ const CartProvider = ({children}) => {
 
     const addToCart = (product, quantity) => {     
         
+        // acá se valida que se agregue el mismo producto al carrito, aumenta el quantity
         let encontrado = cart.find(item => item.id === product.id);
-
         if (encontrado == undefined){
             setCart([...cart, {...product, quantity}]);
         } 

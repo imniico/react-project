@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
-import { getFirestore, collection, getDocs, getDoc, doc, query, where } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
 const ItemListContainer = () => {
 
@@ -13,45 +13,27 @@ const ItemListContainer = () => {
     const { category } = useParams();
 
     const getProducts = () => {
+
         const db = getFirestore();
-        const querySnapshot = collection(db, "products");
-        
-        
-        if (category) {
-           
-            const queryFilter = query(querySnapshot, where("categoryId", "==", category))
-            getDocs(queryFilter)
-                .then((response) => {
-                    const data = response.docs.map((prod) => {
-                        return { id: prod.id, ...prod.data() }
-                    })
-                    setItems(data);
-                })
-                .catch((error) => { console.log(error) })
+        const queryBase = collection(db, "products");
+        const querySnapshot = category
+            ? query(queryBase, where("categoryId", "==", category))
+            : queryBase
 
-        } else {
-            
-            getDocs(querySnapshot)
-                .then((response) => {
-                    const data = response.docs.map((prod) => {
-                        return { id: prod.id, ...prod.data() }
-                    })
-                    setItems(data);
+        getDocs(querySnapshot)
+            .then((response) => {
+                const data = response.docs.map((prod) => {
+                    return { id: prod.id, ...prod.data() }
                 })
-                .catch((error) => { console.log(error) })
-        }
-
+                setItems(data);
+            })
+            .catch((error) => { console.log(error) })
     }
 
     useEffect(() => {
         getProducts();
     }, [category]);
 
-    // useEffect(() => {
-    //     getProducts.then((res) => {
-    //         setItems(res);
-    //     })
-    // }, [category]);
 
     return (
         <div>

@@ -14,11 +14,13 @@ const ItemDetailContainer = () => {
     const getProduct = () => {
         const db = getFirestore();
         const query = doc(db, 'products', id);
+        
         getDoc(query)
         .then(response => {
             setProduct({id: response.id, ...response.data()});
         })
         .catch(error => console.log(error))
+        
     };
 
     useEffect(() => {

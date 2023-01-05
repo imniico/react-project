@@ -3,5 +3,5 @@
     grid-template-rows: repeat(3, 40vh); /* 3 filas, 25vh c/u */
     grid-template-columns: repeat(3, 1fr); /* 3 columnas, 1 fr c/u */
     gap: 10px;
-    margin: 5vh 30vh;
+    margin: 1vh 30vh;
 }

@@ -11,17 +11,16 @@ const ItemDetail = ({ product }) => {
     const [count, setCount] = useState(1);
     const { cart, addToCart, removeItem, clearCart } = useContext(cartContext);
 
-    
-
     return (
         <div className="detalle">
 
             <div className='nombre'>
                 <h2>{product.title} </h2>
                 <h2>- ID: {product.id}</h2>
+                <h2>(Stock: {product.stock})</h2>
             </div>
 
-            <div className='imgdetail'><img src={product.imageId} alt="" /></div>
+            <div className='imgdetail'><img src={product.imageId} alt={product.title} /></div>
 
             <h2>Precio: ${product.price}</h2>
 
