@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+
+### NicoTechPC
+Este sitio web simula un e-commerce de periféricos para PC.
+Se realizó como proyecto final del curso de React en Coderhouse.
+Se utilizó HTML, CSS, JS y React para el desarrollo y el servicio de Firebase para la consulta de los productos y la inserción de órdenes.
+
+A continuación un gif mostrando el uso de la web:
+![gift pf-react](https://imgur.com/a/c8GSLN5)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
