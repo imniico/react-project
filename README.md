@@ -5,7 +5,7 @@ Se realizó como proyecto final del curso de React en Coderhouse.
 Se utilizó HTML, CSS, JS y React para el desarrollo y el servicio de Firebase para la consulta de los productos y la inserción de órdenes.
 
 A continuación un gif mostrando el uso de la web:
-![gift pf-react](https://imgur.com/a/c8GSLN5)
+![NTPC2](https://user-images.githubusercontent.com/69249617/210899838-19ddd360-debe-4436-91ed-0461369a622b.gif)
 
 ## Getting Started with Create React App
 
